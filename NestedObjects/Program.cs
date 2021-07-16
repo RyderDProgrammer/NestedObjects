@@ -32,12 +32,26 @@ namespace NestedObjects
                 LastName = "Kingof"
             };
 
+            Course c2 = new Course()
+            {
+                Title = "CPW 213"
+            };
+
+            Course c3 = new Course()
+            {
+                Title = "CPW 210"
+            };
+
             Course testCourse = new Course();
             testCourse.Title = "CPW 212 - Advanced .NET";
             testCourse.Description = "The continuation of the .NET class";
             testCourse.Credits = 5;
             testCourse.ClassInstructor = currIns;
             testCourse.Roster = new List<Student>();
+
+            stu3.Schedule.Add(c2);
+            stu3.Schedule.Add(c3);
+            stu3.Schedule.Add(testCourse);
 
             //Adding the students to course.
             testCourse.Roster.Add(stu1);
